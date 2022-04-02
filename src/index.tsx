@@ -2,12 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import reportWebVitals from './reportWebVitals';
+import 'reset-css';
+import './index.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
+const queryClient = new QueryClient();
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <QueryClientProvider client={queryClient}>
+
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+
+  </QueryClientProvider>,
   document.getElementById('root')
 );
 
