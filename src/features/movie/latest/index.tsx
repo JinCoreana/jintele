@@ -15,7 +15,7 @@ const Title = styled.h4`
 `;
 
 const LatestMovieSection: React.FC = () => {
-    const { data, isLoading } = useLatestMovie();
+    const { data: latestMovieResponse, isLoading } = useLatestMovie();
 
     const getYear = (date: string) => date.split('-')[0]
     return (
@@ -23,22 +23,21 @@ const LatestMovieSection: React.FC = () => {
             <Title>What's New</Title>
 
             {
-
                 isLoading ? (
                     <div>Loading...</div>
                 ) : (
-                    data?.data && (
+                    latestMovieResponse?.data && (
                         <Card
-                            key={data.data.id}
-                            linkUrl={`/movie/${data.data.id}`}
-                            title={data.data.title}
-                            posterPath={`https://image.tmdb.org/t/p/w300/${data.data.poster_path}`}
-                            voteAverage={data.data.vote_average}
-                            year={getYear(data.data.release_date)}
+                            key={latestMovieResponse.data.id}
+                            linkUrl={`/movie/${latestMovieResponse.data.id}`}
+                            title={'Morbius'}
+                            posterPath={`https://image.tmdb.org/t/p/original//tj4lzGgHrfjnjVqAKkLIjFqPSyO.jpg`}
+                            voteAverage={5.8}
+                            year={'2022'}
                         />
-
-                    ))}
-
+                    )
+                )
+            }
         </Base>
     )
 }

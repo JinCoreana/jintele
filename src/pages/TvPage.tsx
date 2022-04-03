@@ -1,6 +1,6 @@
 import React from 'react'
-import PopularSection from '../features/movie/popular';
-import TopRateSection from '../features/movie/toprate';
+import PopularTvSection from '../features/tv/popular';
+import TopRateTvSection from '../features/tv/topRate'
 import AiringTodayTvSection from '../features/tv/airingToday';
 import LatestTvSection from '../features/tv/latest';
 import OnTheAirTvSection from '../features/tv/onTheAir';
@@ -27,8 +27,8 @@ const TvPage: React.FC = () => {
                     <LatestTvSection />
                     <AiringTodayTvSection />
                     <OnTheAirTvSection />
-                    <PopularSection />
-                    <TopRateSection />
+                    <PopularTvSection />
+                    <TopRateTvSection />
                 </Container>
             </Main>
             <Footer />

@@ -127,10 +127,9 @@ const SearchResultWrapper = styled.div`
   background-color: #fff;
   width: inherit;
   border-radius: 8px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
   max-height: 480px;
-  
-  overflow-y: visible;
+  overflow-y: scroll;
   
 `;
 const SearchResultList = styled.ul`
@@ -143,11 +142,11 @@ const SearchResultListItem = styled.li`
   padding: 4px 6px;
   box-sizing: border-box;
   color: #222;
-  font-size: 16px;
+  font-size: 12px;
   width: 100%;
   height: 24px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   overflow: hidden;
   text-overflow: ellipsis;

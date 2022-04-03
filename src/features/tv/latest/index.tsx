@@ -21,9 +21,7 @@ const LatestTvSection: React.FC = () => {
     return (
         <Base>
             <Title>What's New</Title>
-
             {
-
                 isLoading ? (
                     <div>Loading...</div>
                 ) : (
@@ -32,10 +30,11 @@ const LatestTvSection: React.FC = () => {
                         <Card
                             key={data.data.id}
                             linkUrl={`/tv/${data.data.id}`}
-                            title={data.data.name}
-                            posterPath={`${process.env.REACT_APP_IMAGE_PREFIX}/${data.data.poster_path}`}
-                            voteAverage={data.data.vote_average}
-                            year={getYear(data.data.first_air_date)}
+                            title={'Halo'}
+                            posterPath={`https://image.tmdb.org/t/p/original//1qpUk27LVI9UoTS7S0EixUBj5aR.jpg`}
+                            voteAverage={8.9}
+                            year={'2022'
+                            }
                         />
 
                     ))}
